@@ -75,7 +75,7 @@ or |g:portal_no_default_key_mappings| has been set to 1.
 {lhs}			{rhs}
 --------		-----------------------------
 <Leader>pb		<Plug>(portal-gun-blue)
-<Leader>po		<Plug>(portal-gun-bluo)
+<Leader>po		<Plug>(portal-gun-orange)
 
 
 
