@@ -1,0 +1,90 @@
+*portal.txt*	Hello and, again, this is the Portal Gun for Vim.
+
+Version: 1.0
+Author : thinca <thinca+vim@gmail.com>
+License: zlib License
+
+==============================================================================
+CONTENTS					*portal-contents*
+
+INTRODUCTION			|portal-introduction|
+INTERFACE			|portal-interface|
+  COMMANDS			  |portal-commands|
+  FUNCTIONS			  |portal-functions|
+  KEY MAPPINGS			  |portal-key-mappings|
+CHANGELOG			|portal-changelog|
+
+
+
+==============================================================================
+INTRODUCTION					*portal-introduction*
+
+*portal.vim* is a Vim plugin to provide the Portal Gun for Vim.
+You can open blue portal and orange portal, and you can jump the cursor
+between two portals.
+
+Reference:
+Portal Website
+- http://www.thinkwithportals.com/
+
+Requirements:
+- Vim 7.3 or later
+
+Latest version:
+https://github.com/thinca/vim-portal
+
+
+
+==============================================================================
+INTERFACE					*portal-interface*
+
+------------------------------------------------------------------------------
+COMMANDS					*portal-commands*
+
+:PortalShoot {color}				*:PortalShoot*
+	Make a {color} portal at the current position.
+	You can use "blue" or "orange" for {color}.
+
+:PortalReset					*:PortalReset*
+	Remove the all portals.
+
+
+------------------------------------------------------------------------------
+FUNCTIONS					*portal-functions*
+
+portal#shoot({color})				*portal#shoot()*
+	A function version of |:PortalShoot|.
+
+portal#reset()					*portal#reset()*
+	A function version of |:PortalReset|.
+
+
+------------------------------------------------------------------------------
+KEY MAPPINGS					*portal-key-mappings*
+
+<Plug>(portal-gun-blue)				*<Plug>(portal-gun-blue)*
+	Make a blue portal at the current position.
+
+<Plug>(portal-gun-orange)			*<Plug>(portal-gun-orange)*
+	Make a orange portal at the current position.
+
+					*g:portal_no_default_key_mappings*
+Following key mappings will NOT be defined if it's already mapped,
+or |g:portal_no_default_key_mappings| has been set to 1.
+
+{lhs}			{rhs}
+--------		-----------------------------
+<Leader>pb		<Plug>(portal-gun-blue)
+<Leader>po		<Plug>(portal-gun-bluo)
+
+
+
+==============================================================================
+CHANGELOG					*portal-changelog*
+
+1.0	2013-07-27
+	- Initial version.
+
+
+==============================================================================
+vim:tw=78:fo=tcq2mM:ts=8:ft=help:norl
