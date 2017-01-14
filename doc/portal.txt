@@ -54,8 +54,14 @@ COMMANDS					*portal-commands*
 ------------------------------------------------------------------------------
 FUNCTIONS					*portal-functions*
 
-portal#shoot({color})				*portal#shoot()*
+portal#shoot({color}, [{position}])		*portal#shoot()*
 	A function version of |:PortalShoot|.
+	If a {position} is given, make a {color} portal at the position.
+	{position} is a |List| with three numbers:
+		[bufnum, lnum, col]
+	"bufnum" is buffer number.
+	"lnum" and "col" are the position in the buffer.
+
 
 portal#reset()					*portal#reset()*
 	A function version of |:PortalReset|.
