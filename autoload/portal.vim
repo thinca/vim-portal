@@ -28,8 +28,8 @@ let s:jump_colors = {
 \   },
 \ }
 
-function! portal#shoot(color)
-  let s:points[a:color] = s:getpos()
+function! portal#shoot(color, ...)
+  let s:points[a:color] = get(a:, 1, s:getpos())
   call portal#show_all()
 endfunction
 
